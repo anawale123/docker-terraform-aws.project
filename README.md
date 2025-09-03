@@ -1,45 +1,41 @@
-#  Project: Docker + Terraform + AWS  
+#  Project: Docker + CICD + Terraform + AWS  
 
 This project demonstrates how to deploy a simple microservices application from local development to the cloud using modern DevOps tools and practices.  
 
-The application is a lightweight **Flask web app (Python)** that uses **Redis** as an in-memory cache to track visitor counts. While the app itself is simple, the focus of this project is on showcasing **cloud deployment workflows, Infrastructure as Code (IaC), and CI/CD pipelines**.  
+The application is a lightweight Flask web app (Python) that uses Redis as an in-memory cache to track visitor counts. While the app itself is simple, the focus of this project is on showcasing **cloud deployment workflows, Infrastructure as Code (IaC), and CI/CD pipelines**.  
 
 ---
 
-This project highlights my ability to:  
-- 🐳 **Containerize applications** with Docker using efficient multi-stage builds.  
-- ⚡ **Implement CI/CD pipelines** with GitHub Actions to automate builds and pushes to AWS ECR.  
-- 🛠 **Provision infrastructure** with Terraform following Infrastructure-as-Code best practices.  
-- ☁️ **Design microservices architecture** on AWS (Flask app + Redis cache).  
-
-This serves as a practical learning project that combines **application development, DevOps practices, and cloud infrastructure** into one workflow.  
-
----
-
-## 🔄 Workflow Overview  
-
-1. **Application** → Flask + Redis app for visitor counting  
-2. **Containerization** → Dockerized with multi-stage builds for optimized image size  
-3. **Local Testing** → Docker Compose bridges Flask and Redis for local microservices testing  
-4. **CI/CD Pipeline** → GitHub Actions builds and pushes images to AWS ECR  
-5. **Infrastructure Provisioning** → Terraform provisions VPC, ECS Fargate, and Redis in a private subnet  
-6. **Deployment** → Application runs in AWS using a two-tier architecture  
+## 🌟 Key Features
+- **Containerized Application**: Flask app with Redis cache for visitor counting
+- **CI/CD Automation**: GitHub Actions builds and pushes Docker images to AWS ECR
+- **Infrastructure as Code**: Terraform provisions AWS resources efficiently
+- **AWS Deployment**: ECS Fargate orchestrates containers in a two-tier architecture (public/private subnets)
+- **Local Development**: Docker Compose allows easy microservices testing
 
 ---
 
-## 🛠 Tools & Technologies  
+## 🛠 Technologies Used
+- **Docker & Docker Compose** – Multi-stage builds, local testing
+- **Python (Flask)** – Lightweight web application
+- **Redis** – In-memory cache for visitor tracking
+- **GitHub Actions** – CI/CD automation
+- **AWS Services**:
+  - ECS Fargate
+  - ECR (Elastic Container Registry)
+  - VPC with public & private subnets
+  - Redis cache in private subnet
+- **Terraform** – Infrastructure provisioning as code
 
--  **Docker** → Multi-stage builds for efficient containerization  
--  **Docker Compose** → Local microservices testing (Flask + Redis)  
--  **GitHub Actions** → CI/CD pipeline for automation  
-- ☁️ **AWS** →  
-  - Elastic Container Registry (ECR)  
-  - ECS Fargate for container orchestration  
-  - VPC with public/private subnets  
-  - Redis in private subnet  
--  **Terraform** → Infrastructure as Code for provisioning cloud resources
+---
 
--  
+## 🔄 Workflow Overview
+1. **Develop**: Flask + Redis app tracks visitor counts  
+2. **Containerize**: Optimize Docker images using multi-stage builds  
+3. **Local Test**: Use Docker Compose to connect Flask and Redis locally  
+4. **CI/CD**: GitHub Actions builds & pushes Docker images to AWS ECR  
+5. **Provision**: Terraform creates VPC, ECS Fargate services, and Redis in private subnet  
+6. **Deploy**: App runs on AWS with a secure two-tier architecture  
 
 ---
 ## 📊 Architecture Diagram
