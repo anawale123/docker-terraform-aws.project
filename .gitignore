@@ -1,0 +1,22 @@
+.env
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+crash.log
+
+# Executables & archives
+*.exe
+*.zip
+*.tar.gz
+
+# Docker
+*.env
+*.pid
+*.log
+*.sock
+
+# System files
+.DS_Store
+Thumbs.db

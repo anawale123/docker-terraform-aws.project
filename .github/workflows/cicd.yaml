@@ -1,0 +1,44 @@
+name: Automating image push to AWS ECR
+
+on: [push]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    env:
+      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: Login to Amazon ECR
+        run: |
+          aws ecr get-login-password --region eu-west-2 \
+          | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.eu-west-2.amazonaws.com
+
+      - name: Build and Publish
+        run: |
+          registry="$AWS_ACCOUNT_ID.dkr.ecr.eu-west-2.amazonaws.com/flask.app"
+          sha=$(git rev-parse --short HEAD)
+          primary_tag="${registry}:${sha}"
+
+          docker build -t $primary_tag .
+          docker push $primary_tag
+
+          current_branch=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$current_branch" = "main" ]; then
+            retention_tag="${registry}:latest"
+            docker tag $primary_tag $retention_tag
+            docker push $retention_tag
+          fi
