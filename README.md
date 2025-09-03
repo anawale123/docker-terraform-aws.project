@@ -37,11 +37,25 @@ This serves as a practical learning project that combines **application developm
   - ECS Fargate for container orchestration  
   - VPC with public/private subnets  
   - Redis in private subnet  
--  **Terraform** → Infrastructure as Code for provisioning cloud resources  
+-  **Terraform** → Infrastructure as Code for provisioning cloud resources
+
+-  
 
 ---
+## 📊 Architecture Diagram
 
-## 📊 Architecture Diagram  
+<p align="center">
+  <img src="assets/architecture.jpg" alt="Architecture Diagram" width="600">
+</p>
+
+
+## 🎥 Flask app
+
+<p align="center">
+  <img src="assets/flask.gif" width="700" alt="Demo video as GIF">
+</p>
+
+
 
 
 
