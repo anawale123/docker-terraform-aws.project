@@ -52,7 +52,7 @@ This serves as a practical learning project that combines **application developm
 ## 🎥 Flask app
 
 <p align="center">
-  <img src="assets/flask.gif" width="700" alt="Demo video as GIF">
+  <img src="assets/flaskapp.gif" width="700" alt="Demo video as GIF">
 </p>
 
 
