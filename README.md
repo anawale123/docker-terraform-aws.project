@@ -43,7 +43,7 @@ To test the Flask application alongside the Redis cache locally, I first built a
 
 After creating the `docker-compose.yml` file, I executed:
 
-bash
+- bash
 docker compose up
 
 
