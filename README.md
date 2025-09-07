@@ -37,13 +37,13 @@ The application is a lightweight Flask web app (Python) that uses Redis as an in
 5. **Provision**: Terraform creates VPC, ECS Fargate services, and Redis in private subnet  
 6. **Deploy**: App runs on AWS with a secure two-tier architecture
 
-## 🔹Testing the Application Locally with Docker
+## 🔹 Testing the Application Locally with Docker
 
 To test the Flask application alongside the Redis cache locally, I first built a Docker image for the Flask app. I then used a **Docker Compose** configuration to connect both containers and run them as a microservices setup. This setup allowed the Flask app and Redis cache to communicate seamlessly, simulating the production environment on a local machine.  
 
 After creating the `docker-compose.yml` file, I executed:
 
-```bash
+bash
 docker compose up
 
 
