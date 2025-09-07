@@ -92,6 +92,11 @@ I created a **CI/CD pipeline** using **GitHub Actions** to automate building, ta
   <img src="assets/architecture.jpg" alt="Architecture Diagram" width="600">
 </p>
 
+## 🔹 Terraform
+
+To bring the architecture diagram to life, I used **Terraform** to define and provision all the AWS infrastructure as code. This included creating the **VPC**, public and private subnets, ECS Fargate services, and a Redis instance in the private subnet. By using Terraform, I could version-control the infrastructure, easily replicate the environment, and ensure that the cloud setup matched the architecture diagram precisely. Once the Terraform scripts were applied, all resources were automatically created and configured, allowing the application to be deployed seamlessly on AWS.
+
+
 
 ## 🎥 Flask app
 
