@@ -6,7 +6,7 @@ The application is a lightweight Flask web app (Python) that uses Redis as an in
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 - **Containerized Application**: Flask app with Redis cache for visitor counting
 - **CI/CD Automation**: GitHub Actions builds and pushes Docker images to AWS ECR
 - **Infrastructure as Code**: Terraform provisions AWS resources efficiently
@@ -15,7 +15,7 @@ The application is a lightweight Flask web app (Python) that uses Redis as an in
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 - **Docker & Docker Compose** – Multi-stage builds, local testing
 - **Python (Flask)** – Lightweight web application
 - **Redis** – In-memory cache for visitor tracking
